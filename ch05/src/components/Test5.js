@@ -19,6 +19,8 @@ class Test5 extends Component {
     }
 
     handleClick = (e) =>{
+        e.preventDefault()
+        
         const {username, password, data} = this.state
         this.setState({
             data : data.concat({ no : this.no ++, 
@@ -45,12 +47,14 @@ class Test5 extends Component {
             
             <div>
                 <h2>{this.state.username}/{this.state.password}</h2>
+                
+                <form onSubmit = {this.handleClick}>
+                    <input type="text" name="username" value = {username} ref = {this.usernameInput} onChange={this.handleChange}/>/
+                    <input type="text" name="password" value = {password} onChange={this.handleChange}/><br/><br/>
 
-                <input type="text" name="username" value = {username} ref = {this.usernameInput} onChange={this.handleChange}/>/
-                <input type="text" name="password" value = {password} onChange={this.handleChange}/><br/><br/>
-
-                <button onClick = {() => this.handleClick()}>확인</button>
-
+                    <button type="submit">확인</button>
+                </form>
+            
             <ul>
                 {
                     data.map(item => <li key ={item.no}>
