@@ -8,22 +8,23 @@ class Test4 extends Component {
         email : '3'
     }
 
-    handleChange1 = (e) => {
-        this.setState ({
-            ["username"] : e.target.value
-        })
-    }
+    // handleChange1 = (e) => {
+    //     this.setState ({
+    //         [e.target.name] : e.target.value
+    //     })
+    // }
 
-    handleChange2 = (e) => {
-        this.setState ({
-            ["password"] : e.target.value
-        })
+    // handleChange2 = (e) => {
+    //     this.setState ({
+    //         [e.target.name] : e.target.value
+    //     })
         
-    }
+    // }
     
-    handleChange3 = (e) => {
+    handleChange = (e) => {
+        const {name, value} = e.target
         this.setState ({
-            ["email"] : e.target.value
+            [name] : value
         })
         
     }
@@ -35,9 +36,9 @@ class Test4 extends Component {
                 <h2>아이디 : {username}</h2>
                 <h2>비밀번호 : {password}</h2>
                 <h2>이메일 : {email}</h2>
-                아이디 : <input type="text" onChange={this.handleChange1}/> <br/>
-                비밀번호 : <input type="text" onChange={this.handleChange2}/> <br/>
-                이메일 : <input type="text" onChange={this.handleChange3}/> <br/>
+                아이디 : <input type="text" name="username" onChange={this.handleChange}/> <br/>
+                비밀번호 : <input type="text" name="password" onChange={this.handleChange}/> <br/>
+                이메일 : <input type="text" name="email" onChange={this.handleChange}/> <br/>
 
             </div>
         );
