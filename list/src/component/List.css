@@ -1,0 +1,5 @@
+ul{}
+ul li{ height: 40px;   font-size: 18px; text-indent: 20px; line-height: 40px; position: relative;}
+ul li:nth-child(even){ background: #FFF3E0;}
+ul li:nth-child(odd){ background: #FFB74D;}
+ul li button {position: absolute; left: 400px; top: 3px; padding:6px 30px ; background: #000; color:#fff}

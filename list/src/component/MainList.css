@@ -1,0 +1,4 @@
+*{margin:0; padding:0; box-sizing: border-box;}
+li{ list-style: none;}
+.list-wrap{width: 1200px; margin:auto;}
+.list-wrap h2{ font-size: 30px; margin-bottom:30px ; padding:20px 0 ; border-bottom: 1px solid #dcdcdc; text-indent: 30px;}
