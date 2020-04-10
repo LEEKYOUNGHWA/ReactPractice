@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>1일차 작성법</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+<body>
+<div id="root" ></div>
+
+<script type="text/babel"> 
+    
+    let dom = document.querySelector('#root');
+    
+    
+    let dog = {name :'치와와', age : 20}
+
+    const link ='http://www.naver.com'
+    const title = '네이버로이동합니다.'
+    
+
+    let flg = true;
+    let msg1 ='안녕'
+    let msg2 ='잘가'
+
+
+
+    let data =[
+        {name : '홍길동', addr:'서울', age : 20},
+        {name : '김', addr:'서울', age : 20},
+        {name : '이', addr:'울산', age : 20},
+        {name : '박', addr:'김해', age : 20}
+    ]
+
+
+    let el = (
+
+            <table>
+                    data.map(item)=>(
+                        <p>{item.name}</p>
+                    )
+            </table>
+
+    )
+    
+    ReactDOM.render(el,dom)
+
+</script>  
+
+<pre>
+
+    1. <태그/>
+    2. <태그></태그>
+    3. 두줄이상이면 <div></div>
+    4. 주석 {/**/}
+    5. <태그 style ={{속성:값}}>인라인방식
+    6. let style ={'속성':'값'}=> style ={style}
+    7. let 변수 = 값  => {변수},{이벤트함수명}
+
+</pre>
+
+</body>
+</html>

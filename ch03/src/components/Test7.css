@@ -1,0 +1,5 @@
+.gallery { width: 1400px; margin: auto;}
+.gallery li { float: left; width: 200px; border: 1px solid #000; margin: 15px; padding: 10px; height: 500px; list-style: none;}
+.gallery li img { width: 200px; height: 250px;}
+.gallery li h3 { font-size: 20px; margin-bottom:  15px;}
+.gallery li p { font-size: 16px;}
