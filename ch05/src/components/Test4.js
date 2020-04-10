@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class Test4 extends Component {
     
     state = {
-        username : '1',
-        password : '2',
-        email : '3'
+        username : '',
+        password : '',
+        email : ''
     }
 
     // handleChange1 = (e) => {
