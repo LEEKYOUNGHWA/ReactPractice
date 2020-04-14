@@ -3,6 +3,7 @@ import './Form.css'
 
 class Form extends Component {
 
+    usernameInput = React.createRef()
     state = {
         username : 'dd',
         password : 'ff'
@@ -16,14 +17,42 @@ class Form extends Component {
         })
     }
 
+    handleSubmit = (e) =>{
+        
+        e.preventDefault()
+        
+        const {username, password} = this.state
+        this.props.onInsert(username, password)
+
+        this.setState({
+            username:'' ,
+            password:''
+        })
+
+        this.usernameInput.current.focus()
+    }
+
+ 
     render() {
+        const {username, password} = this.state
         return (
             <div>
-                <h3>{this.state.username} / {this.state.password}</h3>
-                <form onSubmit></form>
-                <input type="text" onChange ={this.handleChange} name="username"/>
-                <input type="text" onChange ={this.handleChange} name="password"/>
-                <button>확인</button>
+                <h3>{username} / {password}</h3>
+                <form onSubmit={this.handleSubmit}>
+                    <input type="text" 
+                    onChange ={this.handleChange} 
+                    name="username" 
+                    value={username}
+                    ref = {this.usernameInput}
+                    />
+                    
+                    <input type="text" 
+                    onChange ={this.handleChange} 
+                    name="password" 
+                    value={password}/>
+
+                    <button type="submit">확인</button>
+                </form>
             </div>
         );
     }
