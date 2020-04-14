@@ -1,0 +1,10 @@
+.Form {background:rgb(247, 227, 227) ; text-align: center; padding: 40px 0}
+.Form input{ width: 450px; 
+    height: 60px;
+    border: 1px solid #ddccdd; 
+    font-size: 20px; 
+    padding :10px;
+    box-sizing: border-box;}
+.Form button{width: 80px; 
+    height: 60px; 
+    border:1px solid #666}
