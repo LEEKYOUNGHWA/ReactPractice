@@ -17,13 +17,20 @@ class Todo extends Component {
         })
     }
 
+    handleRemove = (id) =>{
+        const {todos} = this.state 
+        this.setState({
+            todos : todos.filter(todo => todo.no !== id)
+        })
+       }
+
     render() {
         const {todos} = this.state
         return (
             <div className="Todo">
                 <h1>TodoList</h1>
                 <Form onInsert = {this.handleInsert}/>
-                <List todos={todos}/>
+                <List todos={todos} onRemove={this.handleRemove}/>
             </div>
         );
     }
