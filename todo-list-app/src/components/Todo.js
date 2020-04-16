@@ -13,7 +13,7 @@ class Todo extends Component {
     handleInsert =(text) =>{
         const {todos} = this.state
         this.setState({
-            todos : todos.concat({no:this.no++, text})
+            todos : todos.concat({no:this.no++, text, flg:false})
         })
     }
 
@@ -24,13 +24,25 @@ class Todo extends Component {
         })
        }
 
+    handleToggle = (id) =>{
+        const {todos} = this.state
+        this.setState({
+            todos : todos.map(todo => {
+                if(todo.no === id) return {...todo, flg : !todo.flg}
+                return todo
+            })
+        })
+
+
+    }
+
     render() {
         const {todos} = this.state
         return (
             <div className="Todo">
                 <h1>TodoList</h1>
                 <Form onInsert = {this.handleInsert}/>
-                <List todos={todos} onRemove={this.handleRemove}/>
+                <List todos={todos} onRemove={this.handleRemove} onToggle={this.handleToggle}/>
             </div>
         );
     }
