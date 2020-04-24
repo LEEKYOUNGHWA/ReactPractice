@@ -8,4 +8,6 @@
 2020-04-10 ch05 list
 2020-04-14 list todo-list-app  
 2020-04-16 todo-list-app ch07-music-app  
-2020-04-21 
+2020-04-21 ch07-music-app  
+2020-04-23 ch07-music-app  
+2020-04-24 

@@ -4,7 +4,7 @@ import './List.css'
 
 class List extends Component {
     render() {
-        const { music }  = this.props
+        const { music, isOpen }  = this.props
         return (
             <div className="List">
                 <table>
@@ -24,7 +24,7 @@ class List extends Component {
                     </thead>
                     <tbody>
                         {
-                            music.map( item => <Item key={item.rank} music={item} /> )
+                            music.map( item => <Item key={item.rank} music={item} isOpen={isOpen}/> )
                         }
                     </tbody>
                 </table>

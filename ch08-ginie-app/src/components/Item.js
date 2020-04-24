@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 class Item extends Component {
     render() {
-        const {music}  = this.props
+        const {music, isOpen}  = this.props
         return (
-            <tr>
+            <tr onClick = {() => isOpen(music.rank)}>
                 <td> <img src={music.poster} alt=""/> </td>
                 {/* <td> {music.state} </td> */}
                   <td>

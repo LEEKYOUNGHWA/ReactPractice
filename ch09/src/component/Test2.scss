@@ -1,0 +1,33 @@
+// .con-box {width: 600px; margin: auto; border: 1px solid #000; padding: 20px;
+// }
+// .con-box .box{width: 200px;height: 200px;margin: 20px;}
+// .con-box .box1{background: green;}
+// .con-box .box2{background: yellowgreen;}
+// .con-box .box3{background: yellow;}
+// .con-box .box4{background: skyblue;}
+// .con-box .box5{background: pink;}
+
+.con-box {
+    width: 600px; margin: auto; border: 1px solid black; padding: 20px;
+    .box {width: 100px; margin: 10px; height : 100px; transition: 0.3s;
+        &:hover{
+            background:rgb(98, 98, 241); height: 300px; width: 300px; 
+        }
+        &:active{
+            background:rgb(252, 193, 126); height: 300px; width: 300px;
+        }
+        &:after{
+            content: "맨뒤에 내용 추가"; display: block; background: rgb(72, 211, 72);
+        }
+        &:before{
+            content: "맨앞"; display: block; background: #ff000f;
+            width: 20px; height: 20px; border-radius: 50%; background: white;
+        }
+        
+        background: pink; }
+    .box1{background: salmon;}
+    .box2{background: yellow;}
+    .box3{background: skyblue;}
+    .box4{background: powderblue;}
+    .box5{background: pink;}
+}
