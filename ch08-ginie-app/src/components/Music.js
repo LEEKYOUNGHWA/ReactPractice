@@ -30,7 +30,7 @@ class Music extends Component {
         })
     }
 
-    handleClose = () =>{
+    onclose = () =>{
         this.setState ({
             isOpen:false
         })
@@ -44,7 +44,7 @@ class Music extends Component {
                 <Form onText={this.handleInsert}/>
                 <List music = { filterMusic.length >0? filterMusic : music }
                     isOpen={this.handleOpen}/>
-                <Modal isOpen={isOpen} musicItem={musicItem} handleClose={this.handleClose}/>
+                <Modal isOpen={isOpen} musicItem={musicItem} onclose={this.onclose}/>
             </div>
         );
     }
