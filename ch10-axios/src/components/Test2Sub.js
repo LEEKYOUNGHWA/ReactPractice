@@ -6,6 +6,12 @@ class Test2Sub extends Component {
         count: 0
     }
 
+    static getDerivedStateFromProps(nextProps, prevState) {
+        console.log('2-getDerivedStateFromProps')
+        return null
+    }
+
+
     handleUp = () => {
         const {count} = this.state
         this.setState({
@@ -21,8 +27,29 @@ class Test2Sub extends Component {
         })
     }
   
+    componentDidMount() {
+        console.log('4-componentDidMount')
+    }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log('5-shouldComponentUpdate')
+        return nextState.count%10!==5
+    }
+
+    componentDidUpdate() {
+        console.log('componentDidUpdate')
+    }
+
+    componentWillUnmount() {
+        console.log('componentWillUnmount')
+    }
+    
+    
+    
     render() {
+
+        console.log('3-render')
+
         const {color} = this.props
         const {count} = this.state
 
