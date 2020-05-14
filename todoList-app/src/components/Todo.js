@@ -15,17 +15,35 @@ const Todo = () => {
             ...todos,
             {
                 id:noRef.current,
-                text : text
+                text : text,
+                flg : false
             }
         ])
         noRef.current++
+    }
+
+    const handleRemove = (no) =>{
+        setTodos(todos.filter(todo => todo.id!== no))
+    }
+
+    const handleToggle = (no) =>{
+        const toggleTodo = todos.map ( todo => {
+            if(todo.id===no){
+                return {
+                    ...todo,
+                    flg : !todo.flg
+                }
+            }
+            return todo
+        })
+        setTodos(toggleTodo)
     }
 
     return (
         <div className="Todo">
             <h1>Todo List</h1>
             <Form onInsert = {handleInsert}/>
-            <List todos={todos}/>
+            <List todos={todos} onRemove={handleRemove} onToggle={handleToggle}/>
         </div>
     );
 };

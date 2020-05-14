@@ -7,6 +7,7 @@ import Test3 from './Test3';
 import Test4 from './Test4';
 import Test5 from './Test5';
 import Test6 from './Test6';
+import Test7 from './Test7';
 import './Main.css'
 
 const Main = () => {
@@ -20,6 +21,7 @@ const Main = () => {
                 <li>  <Link to="/test4"> test4 </Link></li>
                 <li>  <Link to="/test5"> test5 </Link></li>
                 <li>  <Link to="/test6"> test6 </Link></li>
+                <li>  <Link to="/test7"> test7 </Link></li>
             </ul>
            <div>
                <Route path="/" exact component={Home}/>
@@ -29,6 +31,7 @@ const Main = () => {
                <Route path="/test4" component={Test4} />
                <Route path="/test5" component={Test5} />
                <Route path="/test6" component={Test6} />
+               <Route path="/test7" component={Test7} />
            </div> 
         </div>
     );
