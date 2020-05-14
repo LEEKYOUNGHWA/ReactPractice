@@ -1,0 +1,17 @@
+.App {
+  margin: 20px;
+  height: 80px;
+  border-bottom: 1px solid #000;
+}
+
+.App ul{
+  overflow: hidden;
+}
+
+.App ul li{
+  float: left;
+  margin-right: 20px; 
+  font-size: 18px;
+  list-style: none;
+}
+
