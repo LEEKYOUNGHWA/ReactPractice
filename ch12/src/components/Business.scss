@@ -1,0 +1,23 @@
+.my-masonry-grid {    
+    display: flex;
+    margin-left: -30px; /* gutter size offset */
+    width: auto;
+  }
+  .my-masonry-grid_column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+  }
+   
+  /* Style your items */
+  .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */   
+    margin-bottom: 30px;  
+    border: 1px solid #000;  
+    padding:15px
+  }
+.Business {width:1400px; overflow: hidden;}
+.Business section{width:1400px; overflow: hidden;}
+.Business section > div{width:1400px; padding:15px; border:1px solid #333; float: left; margin-right:20px; margin-bottom:30px}
+.Business section > div a {}
+.Business section > div a img{width:100%}
+.Business section> div a h2 { font-size:25px; margin:15px 0}
+.Business section> div a p {font-size: 18px; line-height: 1.7;}
