@@ -1,0 +1,6 @@
+
+
+body{margin: 20px;}
+
+.nav{overflow: hidden; margin-bottom: 30px;}
+.nav li {float: left;margin-right: 20px;list-style: none; font-size: 18;}
