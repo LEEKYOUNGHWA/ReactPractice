@@ -10,5 +10,10 @@
 2020-04-16 todo-list-app ch07-music-app  
 2020-04-21 ch07-music-app  
 2020-04-23 ch07-music-app  
+<<<<<<< HEAD
 2020-04-24 ch08  
 2020-05-14 ch15, todoList-app
+=======
+2020-04-24 ch08    
+2020-05-14 ch15, todoList-app
+>>>>>>> 037231af77f2d580c9c12edfd636d781161ba7f6
