@@ -7,8 +7,13 @@ import * as colorListActions from '../store/modules/colorList'
 
 class ColorListContainer extends Component {
     render() {
+        const{list, input, ColorListActions, CounterActions} = this.props
         return (
-            <ColorList/>
+            <ColorList
+            list = {list}
+            input ={input}
+            ColorListActions ={ColorListActions}
+            CounterActions ={CounterActions}/>
         );
     }
 }

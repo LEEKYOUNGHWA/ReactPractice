@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 class ListItem extends Component {
  
 	render() {
+
+		const {style} = this.props
 		return (
-			<div/>
+			<div style ={style}/>
 		);
 	}
 }
